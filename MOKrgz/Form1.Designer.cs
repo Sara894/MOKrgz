@@ -42,9 +42,9 @@
             this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.Font = new System.Drawing.Font("Noto Sans Hebrew", 13.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(305, 136);
+            this.button1.Location = new System.Drawing.Point(287, 167);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 53);
+            this.button1.Size = new System.Drawing.Size(378, 78);
             this.button1.TabIndex = 0;
             this.button1.Text = "Решить уравнение";
             this.button1.UseVisualStyleBackColor = false;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 226);
+            this.ClientSize = new System.Drawing.Size(694, 260);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

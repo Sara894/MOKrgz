@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -51,22 +52,30 @@ namespace MOKrgz
                 //1 находим НОД чисел x y - коэффициентов перед X и Y
                 //2 если НОД не равен 1 то делим на это число
                 //3 если НОД не равен 1 то уравнение не решаемое в целых числах
-                if (c % nod != 0)
-                {//нерешаемое уравнение
-                    Form2 f2 = new Form2();
-                    f2.Show();
-                }
-                else// если решаемое то решаем
+               if(x > 1000 || y > 1000 || c > 1000)
                 {
-                    x /= nod;
-                    y /= nod;
-                    c /= nod;
-                    int[] arr = MOKrgz.NumberAlgo.diof(x, y, c);
-                    Decision dec = new Decision(arr);
-                    dec.Show();
-
+                    Form3 f3 = new Form3();
+                    f3.Show();
                 }
-               
+                else
+                {
+                    if (c % nod != 0)
+                    {//нерешаемое уравнение
+                        Form2 f2 = new Form2();
+                        f2.Show();
+                    }
+                    else// если решаемое то решаем
+                    {
+                        x /= nod;
+                        y /= nod;
+                        c /= nod;
+                        int[] arr = MOKrgz.NumberAlgo.diof(x, y, c);
+                        Decision dec = new Decision(arr);
+                        dec.Show();
+
+
+                    }
+                }
                 
              }
              catch (System.FormatException)
@@ -75,6 +84,8 @@ namespace MOKrgz
                 errorForm.Show();
              }
 
-}
+           
+
+        }
     }
 }

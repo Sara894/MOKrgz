@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,18 +27,23 @@ namespace MOKrgz
             int[] arr = new int[4];
             arr[0] = a;
             arr[1] = b;
-           for(int i = -10; i < 10000; i++)
+            int begin = -1000;
+        
+            
+           for (int i = begin; i < 10000; i++)
             {
-                for(int j = -10; j < 10000; j++)
+                for(int j = begin; j < 10000; j++)
                 {
                     if(a*i + b*j == c)
                     {
                         arr[2] = i;
                         arr[3] = j;
-                        goto ret;
+                            goto ret;
                     }
                 }
             }
+         /*   if (arr[2] > 200 && arr[3] > 200)
+                goto begin_minus;*/
         ret:
             return arr;
 
